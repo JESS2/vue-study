@@ -54,6 +54,74 @@
         </li>
     </ul>
 
+    <ul id="example-6">
+        <li v-for="value in userProfile">
+            {{ value }}
+        </li>
+    </ul>
+
+    <ul id="example-7">
+        <li v-for="n in evenNumbers">
+            {{ n }}
+        </li>
+
+        <li v-for="n in 10">
+            숫자 for : {{ n }}
+        </li>
+    </ul>
+
+    <ul id="example-8">
+        <template v-for="item in items">
+            <li>{{ item.msg }}</li>
+            <li>hi!</li>
+        </template>
+    </ul>
+
+    <ul id="example-9">
+        <li v-for="todo in todos" v-if="!todo.isComplete">
+            {{ todo.name }}
+        </li>
+    </ul>
+
+    <ul id="example-10">
+        <template v-if="todos.length">
+            <li v-for="todo in todos">
+                {{ todo.name }}
+            </li>
+        </template>
+        <template v-else>
+            No todos left!
+        </template>
+    </ul>
+
+    <hr>
+    <h3>컴포넌트</h3>
+
+    <my-component
+        v-for="(item, index) in items"
+        v-bind:item="item"
+        v-bind:index="index"
+        v-bind:key="item.id"
+    >
+    </my-component>
+
+    <div id="todo-list-example">
+        <input
+            v-model="newTodoText"
+            v-on:keyup.enter="addNewTodo"
+            placeholder="Add a todo"
+        >
+        <ul>
+            <li
+                is="todo-item"
+                v-for="(todo, index) in todos"
+                v-bind:key="todo.id"
+                v-bind:title="todo.title"
+                v-on:remove="todos.splice(index, 1)"
+            ></li>
+        </ul>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>

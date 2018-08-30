@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vue-tutorial-7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="example-1">
+        <button v-on:click="counter += 1">+</button>
+        <button v-on:click="counter -= 1">-</button>
+        <p>{{ counter }}</p>
+    </div>
+
+    <div id="example">
+        <button v-on:click="addFunction">+</button>
+        <button v-on:click="subFunction">-</button>
+        <p>{{ counter }}</p>
+    </div>
+
+    <div id="example-2">
+        <button v-on:click="greet">Greet</button>
+    </div>
+
+    <div id="example-3">
+        <button v-on:click="say('hi')">Say hi</button>
+        <button v-on:click="say('what')">Say what</button>
+        <button v-on:click="warn('hello world', $event)">submit</button>
+    </div>
+
+    <div id="example-4">
+        <section class="a" v-on:click="clickFunc">
+            a
+            <div class="b">
+                b
+                <p class="c">
+                    c
+                </p>
+            </div>
+        </section>
+        <br>
+        <section class="a" v-on:click.self="clickFunc">
+            a
+            <div class="b">
+                b
+                <p class="c">
+                    c
+                </p>
+            </div>
+        </section>
+        <br>
+        <section class="a" v-on:click.self.once="clickFunc">
+            a
+            <div class="b">
+                b
+                <p class="c">
+                    c
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <div id="example-5">
+        <input v-on:keyup.enter="submit">
+    </div>
+
+    <br>
+    <script src="main.js"></script>
+</body>
+</html>
