@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vue-tutorial-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <!-- 선언적 렌더링 -->
+    <h3>app</h3>
+    <div id="app">
+        {{ message }} my name is {{ name }}
+    </div>
+
+    <hr>
+    <h3>app2</h3>
+    <!-- v-bind 속성은 디렉티브라고 함 -->
+    <div id="app-2">
+        <span v-bind:title="message">
+            내 위에 잠시 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다.
+        </span>
+    </div>
+
+    <hr>
+    <h3>app3</h3>
+    <!-- 조건문 -->
+    <div id="app-3">
+        <p v-if="seen">이제 나를 볼 수 있어요</p>
+    </div>
+
+    <hr>
+    <h3>app4</h3>
+    <!-- 반복문 -->
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{ todo.text }}, {{ todo.price }}
+            </li>
+        </ol>
+    </div>
+
+    <hr>
+    <h3>app5</h3>
+    <!-- 사용자 입력 핸들링 -->
+    <div id="app-5">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">메시지 뒤집기</button>
+    </div>
+
+    <hr>
+    <h3>app6</h3>
+    <!-- 양식에 대한 입력과 앱 상태를 양방향으로 바인딩하는 v-model -->
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+    </div>
+
+    <hr>
+    <h3>test</h3>
+    <!-- test-component 컴포넌트의 인스턴스 만들기 -->
+    <div id="test">
+        <test-component></test-component>
+    </div>
+
+    <hr>
+    <h3>app7</h3>
+    <div id="app-7">
+        <ol>
+            <!-- todo-item 컴포넌트의 인스턴스 만들기 -->
+            <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+            </todo-item>
+        </ol>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

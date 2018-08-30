@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>vue-tutorial-6</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <ul id="example-1">
+        <li v-for="item in items">
+            {{ item.message }}
+        </li>
+
+        <!-- in 대신에 of를 구분자로 사용할 수 있음 -->
+        <li v-for="item of items">
+            of : {{ item.message }}
+        </li>
+    </ul>
+
+    <ul id="example-2">
+        <li v-for="(item, index) in items">
+            {{ parentMessage }} - {{ index }} - {{ item.message }}
+        </li>
+    </ul>
+
+    <ul id="example-3">
+        <li v-for="value in object">
+            {{ value }}
+        </li>
+
+        <li v-for="(value, key) in object">
+            {{ key }} : {{ value }}
+        </li>
+
+        <li v-for="(value, key, index) in object">
+            {{ index }} : {{ key }} : {{ value }}
+        </li>
+    </ul>
+
+    <ul id="example-4">
+        <div v-for="obj in object">
+            <li v-for="(value, key) in obj">
+                {{ key }} : {{ value }}
+            </li>
+        </div>
+    </ul>
+
+    <ul id="example-5">
+        <li v-for="item in items" :key="item.id">
+            {{ item.msg }}
+        </li>
+    </ul>
+
+    <script src="main.js"></script>
+</body>
+</html>

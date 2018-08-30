@@ -1,0 +1,11 @@
+.setColor {
+    color: yellowgreen;
+}
+
+.active {
+    color: blue;
+}
+
+.text-danger {
+    color: red;
+}

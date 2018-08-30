@@ -3,20 +3,30 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>vue-tutorial</title>
+    <title>vue-tutorial-2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
     <div id="app">
-        {{ message }} my name is {{ name }}
+        <p>{{ foo }}</p>
+        <button v-on:click="foo = 'bar'">Change it</button>
     </div>
+
+    <div id="app-1">
+        <span>메시지: {{ msg }}</span>
+    </div>
+
     <div id="app-2">
-        <span v-bind:title="message">
-            내 위에 잠시 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다.
-        </span>
+        <span v-once>메시지: {{ msg }}</span>
     </div>
+
+    <div id="app-3">
+        <a href="url">click</a>
+        <a v-bind:href="url">click</a>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
