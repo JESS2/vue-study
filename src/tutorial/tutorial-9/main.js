@@ -152,7 +152,7 @@ new Vue({
 new Vue({
     el: '#example-9',
     components: {
-        'comp': {
+        'simple-comp': {
             props: ['someProp'],
             template: '<span>{{ someProp }}의 타입은 {{ typeof someProp }}입니다.</span>'
         }
@@ -177,3 +177,20 @@ new Vue({
         }
     }
 })
+
+var a = () => console.log('test');
+
+var b = () => {
+    a();
+}
+
+b();
+
+var c = (num) => {
+    return num + num;
+}
+
+var d = num => num + num;
+
+console.log(c(3));
+console.log(d(3));
