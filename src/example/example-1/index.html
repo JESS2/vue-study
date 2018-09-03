@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        {{ message }} my name is {{ name }}
+
+        <br>
+        <span v-bind:title="title">마우스를 올려서 동적으로 바인딩 된 title 확인</span>
+
+        <p v-if="seen">seen이 true일 때만 이 문장이 보임</p>
+
+        <ol>
+            <li v-for="book in books">
+                {{ book.name }} : {{ book.price }}
+            </li>
+        </ol>
+
+        <p>{{ message2 }}</p>
+        <button v-on:click="reverse">뒤집기</button>
+
+        <br>
+        <input type="text" v-model="message3">
+        <p>입력 내용: {{ message3 }}</p>
+
+        <simple-component-1></simple-component-1>
+        <simple-component-2></simple-component-2>
+        <simple-component-3 deliver="this is component3"></simple-component-3>
+
+        <ol>
+            <simple-component-4
+                v-for="list in lists"
+                v-bind:fruits="list">
+            </simple-component-4>
+        </ol>
+
+        <ol>
+            <simple-component-5
+                v-for="g in groceryLists"
+                v-bind:todo="g">
+            </simple-component-5>
+        </ol>
+
+        <ol>
+            <simple-component-6
+                v-for="s in simpleLists"
+                v-bind:simple="s"
+                v-bind:key="s.id">
+            </simple-component-6>
+        </ol>
+
+        <p>{{ obj.foo }}</p>
+        <button v-on:click="obj.foo = 'baz'">chnage it</button>
+
+        <p>{{ changeMessage }}</p>
+
+        <p v-once>{{ changeMessage }}</p>
+
+        <p>
+            <!-- 정상 접속-->
+            <a href="https://www.google.com/">click</a>
+
+            <!-- 접속 안됨 -->
+            <a href="url">click</a>
+
+            <!-- 정상 접속 -->
+            <a v-bind:href="url">click</a>
+        </p>
+
+        <p>{{ generalMessage }}</p>
+        <p>{{ reversedMessage }}</p>
+        <p>{{ methodCallMessage() }}</p>
+        <p>{{ now }}</p>
+
+        <p>{{ fullName }}</p>
+        <p>{{ fullName2 }}</p>
+
+        
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

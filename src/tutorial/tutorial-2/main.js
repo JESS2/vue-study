@@ -40,7 +40,7 @@ var app0 = new Vue({
 console.log(app0.$el === document.getElementById('app')); // true
 
 // 인스턴스 라이프사이클 훅
-// created 훅은 인스턴스가 생성도니 후에 호출됨
+// created 훅은 인스턴스가 생성된 후에 호출됨
 var vm1 = new Vue({
     data: {
         a: 1
