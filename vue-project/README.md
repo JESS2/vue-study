@@ -1,6 +1,6 @@
-# vue-todos-client
+# vue-project
 
-> A Vue.js project
+> Vue.js 예제 실습과 각종 연습용 작성 코드를 커밋합니다.
 
 ## Build Setup
 
