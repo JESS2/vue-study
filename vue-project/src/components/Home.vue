@@ -2,6 +2,7 @@
   <div>
     <img src="./../assets/logo.png">
     <h1>{{ msg }}</h1>
+    <router-view name="Example"></router-view>
   </div>
 </template>
 

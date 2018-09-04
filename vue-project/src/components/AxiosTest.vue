@@ -29,16 +29,16 @@
             }
         },
         computed: {
-            hasPost () {
+            hasPost() {
                 return this.posts.length > 0
             },
-            hasTodo () {
+            hasTodo() {
                 return this.todos.length > 0
             }
         },
         methods: {
             // 모든 post 불러오기
-            searchTerm () {
+            searchTerm() {
                 this.todos = []
                 // using JSONPlaceholder
                 this.$http.get(`${url}/posts`)
@@ -47,7 +47,7 @@
                     })
             },
             // 모든 todo 불러오기
-            getTodo () {
+            getTodo() {
                 this.posts = []
                 this.$http.get(`${url}/todos`)
                     .then((result) => {

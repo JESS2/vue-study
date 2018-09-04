@@ -6,14 +6,18 @@
     <router-link to="/todos">List</router-link>
     <router-link to="/example">Example</router-link>
     <router-link to="/axios">Axios</router-link>
-    <router-view/>
+    <router-link to="/detail">Detail</router-link>
+    <br>
+    <router-link to="/listPage">ListPage</router-link>
+    <router-link to="/detailPage">DetailPage</router-link>
+    
+    <!-- router-view는 최상위 outlet임. 최상위 경로와 일치하는 컴포넌트를 렌더링.-->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'App',
-    methods: {
-    }
+    name: 'App'
   }
 </script>
