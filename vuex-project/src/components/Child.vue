@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h2>Child Component</h2>
-    {{ passedCounter }}
+    {{ this.$store.state.counter }}
     <button @click="addCounter">+</button>
     <button @click="subCounter">-</button>
   </div>
@@ -15,13 +15,12 @@ export default {
     
     }
   },
-  props: ['passedCounter'],
   methods: {
     addCounter () {
-        this.passedCounter++
+        this.$store.state.counter++
     },
     subCounter () {
-        this.passedCounter--
+        this.$store.state.counter--
     }
   }
 }

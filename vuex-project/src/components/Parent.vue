@@ -1,11 +1,11 @@
 <template>
   <div class="hello">
     <h2>Parent Component</h2>
-    {{ counter }}
+    {{ this.$store.state.counter }}
     <button @click="addCounter">+</button>
     <button @click="subCounter">-</button>
 
-    <the-child :passedCounter="counter"></the-child>
+    <the-child></the-child>
   </div>
 </template>
 
@@ -13,17 +13,12 @@
 import TheChild from './Child.vue'
 export default {
   name: 'Parent',
-  data () {
-    return {
-      counter: 0
-    }
-  },
   methods: {
       addCounter () {
-        this.counter++
+        this.$store.state.counter++
       },
       subCounter () {
-        this.counter--
+        this.$store.state.counter--
       }
   },
   components: {
