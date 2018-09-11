@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h2>Vuex 상태 관리 라이브러리</h2>
+    <h2>home</h2>
   </div>
 </template>
 
