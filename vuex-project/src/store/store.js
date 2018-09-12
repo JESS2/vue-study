@@ -21,7 +21,6 @@ export const store = new Vuex.Store({
         },
         // state를 조작하는데 필요한 특정 값을 넘김
         changeCounter (state, payload) {
-            console.log(payload.value)
             state.counter = payload.value
         }
     },
