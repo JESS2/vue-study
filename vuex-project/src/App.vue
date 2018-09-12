@@ -10,7 +10,6 @@
     <router-link to="/parent5">parent5</router-link>
     <router-link to="/parent6">parent6</router-link>
     <router-link to="/parent7">parent7</router-link>
-    <router-link to="/parent9">parent9</router-link>
     <h1>Vuex 상태 관리 라이브러리 사용하기</h1>
     <router-view/>
   </div>

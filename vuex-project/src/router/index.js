@@ -8,7 +8,6 @@ import Parent4 from '@/components/vuex4/Parent'
 import Parent5 from '@/components/vuex5/Parent'
 import Parent6 from '@/components/vuex6/Parent'
 import Parent7 from '@/components/vuex7/Parent'
-import Parent9 from '@/components/vuex9/Parent'
 
 Vue.use(Router)
 
@@ -54,11 +53,6 @@ export default new Router({
       path: '/parent7',
       name: 'Parent7',
       component: Parent7
-    },
-    {
-      path: '/parent9',
-      name: 'Parent9',
-      component: Parent9
     }
   ]
 })
