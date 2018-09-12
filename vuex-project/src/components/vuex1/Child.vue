@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h2>Child Component</h2>
+    <h2>Child Component1</h2>
     {{ this.$store.state.counter }}
     <button @click="addCounter">+</button>
     <button @click="subCounter">-</button>
@@ -24,5 +24,4 @@ export default {
     }
   }
 }
-
 </script>
